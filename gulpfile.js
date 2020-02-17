@@ -23,6 +23,6 @@ gulp.task('compile-scss', () =>
 
 gulp.task('build', gulp.parallel('copy-scss', 'compile-scss'));
 
-gulp.task('watch', () => gulp.watch(SCSS_SRC, gulp.series('build')));
+gulp.task('watch', () => gulp.watch(SCSS_SRC, gulp.series('compile-scss')));
 
 gulp.task('default', gulp.series('build'));
