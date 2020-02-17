@@ -1,0 +1,13 @@
+// utilities and variables
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// base styles
+@import 'base/reset';
+@import 'base/typography';
+
+// layout styles
+@import 'layout/grid';
+
+// component styles
+@import 'components/header';
