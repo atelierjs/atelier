@@ -1,6 +1,12 @@
+# directories
 .vscode/
 .yalc/
 dist/
 node_modules/
 
+# files
+.DS_*
 yalc.lock
+
+# file extensions
+*.orig
