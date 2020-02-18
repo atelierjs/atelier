@@ -12,18 +12,10 @@
   "scripts": {
     "build:clean": "rm -rf dist",
     "build:scss": "gulp",
-    "build:copy": "cp src/index.js dist && cp merge-package-json.js ./dist",
+    "build:copy": "cp src/index.js dist",
     "build": "npm-run-all build:clean build:scss build:copy",
     "watch": "gulp watch"
   },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-sass": "^4.0.2"
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "singleQuote": true
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

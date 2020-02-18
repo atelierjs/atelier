@@ -4,16 +4,13 @@
 
 <script lang="ts">
 import Vue, { PropType } from 'vue';
-
-export interface HeaderProps {
-  title: string;
-}
+import { Header } from '../props';
 
 export default Vue.extend({
   name: 'header',
   props: {
-    headerProps: {
-      type: Object as () => HeaderProps,
+    header: {
+      type: Header,
     },
   },
 });

@@ -1,7 +1,9 @@
-const isDev = process.env.NODE_ENV === 'development';
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const merge = require('webpack-merge');
 const common = require('../../webpack.common.js');
+
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = merge(common, {
   entry: {
@@ -18,8 +20,24 @@ module.exports = merge(common, {
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        use: 'vue-loader',
+        use: {
+          loader: 'vue-loader',
+          options: {
+            presets: ['@vue/babel-preset-app'],
+          },
+        },
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-typescript'],
+          },
+        },
       },
     ],
   },
+  plugins: [new VueLoaderPlugin()],
 });
