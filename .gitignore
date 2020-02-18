@@ -9,4 +9,5 @@ node_modules/
 yalc.lock
 
 # file extensions
+*.log
 *.orig
