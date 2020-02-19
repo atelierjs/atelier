@@ -9,5 +9,6 @@ node_modules/
 yalc.lock
 
 # file extensions
+*.lerna_backup
 *.log
 *.orig

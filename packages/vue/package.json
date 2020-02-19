@@ -11,6 +11,7 @@
     "build": "npm-run-all build:clean build:js"
   },
   "dependencies": {
+    "@component-lib/core": "file:packages\\core",
     "@vue/babel-preset-app": "^4.2.2",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.0",

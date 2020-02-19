@@ -11,14 +11,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
     "build:core": "cd packages/core && npm run build",
-    "build:types": "cd packages/types && npm run build",
     "build:react": "cd packages/react && npm run build",
-    "build:vue": "cd packages/vue && npm run build"
-  },
-  "dependencies": {
-    "@component-lib/core": "file:packages\\core",
-    "@component-lib/react": "file:packages\\react",
-    "@component-lib/vue": "file:packages\\vue"
+    "build:vue": "cd packages/vue && npm run build",
+    "build": "npm-run-all build:core build:react build:vue"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
