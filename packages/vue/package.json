@@ -1,17 +1,26 @@
 {
-  "name": "@component-lib/vue",
+  "name": "@atelier/vue",
   "version": "1.0.0",
   "author": "Travis Henning & Ryan Meloy",
   "description": "Custom, awesome component library - Vue",
   "license": "UNLICENSED",
   "main": "index.js",
+  "types": "types/packages/vue/src/index.d.ts",
   "scripts": {
     "build:clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack",
-    "build": "npm-run-all build:clean build:js"
+    "build": "npm-run-all build:clean build:js",
+    "prebuild": "npm run build:clean",
+    "prebundle": "npm run prebuild",
+    "bundle:rollup": "rollup -c",
+    "bundle": "npm-run-all bundle:rollup",
+    "postbundle": "cp package.json ./dist && cp -r ../core/dist ./dist/core",
+    "postbuild": "npm run postbundle",
+    "yalc": "cd dist && yalc publish --push"
   },
   "dependencies": {
-    "@component-lib/core": "file:packages\\core",
+    "@atelier/core": "file:packages\\core",
     "@vue/babel-preset-app": "^4.2.2",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.0",

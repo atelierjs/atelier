@@ -1,8 +1,5 @@
 // import components
-import Header, { HeaderProps as LocalHeaderProps } from '@/components/Header';
+import Header from './components/Header.vue';
 
 // export components
 export { Header };
-
-// export types
-export type HeaderProps = LocalHeaderProps;

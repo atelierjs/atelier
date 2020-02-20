@@ -1,4 +1,4 @@
-import '@component-lib/core/src/components/_header.scss';
+import '@atelier/core/src/components/_header.scss';
 
 import React from 'react';
 import { HeaderProps } from 'root/types';

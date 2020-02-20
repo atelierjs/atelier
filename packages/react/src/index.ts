@@ -1,11 +1,5 @@
 // import components
-import Header from '@/components/Header';
-
-// import types
-import { HeaderProps as LocalHeaderProps } from 'root/types';
+import Header from './components/Header';
 
 // export components
 export { Header };
-
-// export types
-export type HeaderProps = LocalHeaderProps;

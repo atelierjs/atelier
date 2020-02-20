@@ -1,3 +1,2 @@
-import Header, { HeaderProps as LocalHeaderProps } from './Header';
-export type HeaderProps = LocalHeaderProps;
+import Header from './Header';
 export default Header;
