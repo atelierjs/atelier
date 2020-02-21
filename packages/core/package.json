@@ -1,0 +1,17 @@
+{
+  "name": "@atelier/core",
+  "version": "1.0.0",
+  "author": "Travis Henning & Ryan Meloy",
+  "description": "Custom, awesome component library",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "scripts": {
+    "build:clean": "rm -rf dist",
+    "build:scss": "gulp",
+    "build:copy": "cp src/index.js dist",
+    "build": "npm-run-all build:clean build:scss build:copy",
+    "watch": "gulp watch"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

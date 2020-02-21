@@ -1,6 +1,15 @@
+# directories
 .vscode/
 .yalc/
+build/
 dist/
 node_modules/
 
+# files
+.DS_*
 yalc.lock
+
+# file extensions
+*.lerna_backup
+*.log
+*.orig

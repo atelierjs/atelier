@@ -1,24 +1,52 @@
 {
-  "name": "component-lib",
-  "version": "1.0.0",
+  "name": "@atelier/root",
+  "private": true,
   "author": "Travis Henning & Ryan Meloy",
   "description": "Custom, awesome component library",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "homepage": "https://atelierjs.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/henningta/component-lib.git"
+    "url": "https://github.com/atelierjs/atelier.git"
   },
-  "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf dist",
-    "build": "gulp",
-    "postbuild": "cp src/index.js dist",
-    "watch": "gulp watch"
+    "bootstrap": "lerna bootstrap --hoist",
+    "build": "npm-run-all core:build react:build vue:build",
+    "bundle": "npm-run-all core:build react:bundle vue:bundle",
+    "core:build": "cd packages/core && npm run build",
+    "core:bundle": "cd packages/core && npm run bundle",
+    "core:yalc": "cd packages/core && npm run yalc",
+    "react:build": "cd packages/react && npm run build",
+    "react:bundle": "cd packages/react && npm run bundle",
+    "react:yalc": "cd packages/react && npm run yalc",
+    "vue:build": "cd packages/vue && npm run build",
+    "vue:bundle": "cd packages/vue && npm run bundle",
+    "vue:yalc": "cd packages/vue && npm run yalc"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@rollup/plugin-alias": "^3.0.1",
+    "babel-plugin-transform-rename-import": "^2.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.2.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "lerna": "^3.20.2",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-scss": "^2.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-vue": "^5.1.6",
+    "typescript": "^3.7.5"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
   }
 }
