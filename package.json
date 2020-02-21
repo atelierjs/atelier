@@ -11,7 +11,8 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
-    "build": "npm-run-all build:core build:react build:vue",
+    "build": "npm-run-all core:build react:build vue:build",
+    "bundle": "npm-run-all core:build react:bundle vue:bundle",
     "core:build": "cd packages/core && npm run build",
     "core:bundle": "cd packages/core && npm run bundle",
     "core:yalc": "cd packages/core && npm run yalc",

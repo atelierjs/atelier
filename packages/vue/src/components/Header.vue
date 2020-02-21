@@ -1,19 +1,15 @@
 <template>
-  <div class="header">{{ header.title }}</div>
+  <div class="header">{{ title }}</div>
 </template>
 
-<script lang="ts">
+<script>
 import '@atelier/core/src/components/_header.scss';
-
 import Vue from 'vue';
-import { Header } from '../props';
 
-export default Vue.extend({
+export default {
   name: 'Header',
   props: {
-    header: {
-      type: Object as () => Header,
-    },
+    title: String,
   },
-});
+};
 </script>

@@ -5,12 +5,12 @@ import babel from 'rollup-plugin-babel';
 import scss from 'rollup-plugin-scss';
 import pkg from './package.json';
 
-const extensions = ['.ts', '.tsx', '.vue'];
+const extensions = ['.js', '.vue'];
 
 const name = 'RollupVue';
 
 export default {
-  input: './src/index.ts',
+  input: './src/index.js',
 
   // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
   // https://rollupjs.org/guide/en#external-e-external

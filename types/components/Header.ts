@@ -1,3 +1,3 @@
-export default interface HeaderType {
+export default interface HeaderProps {
   title?: string;
 }

@@ -1,3 +1,2 @@
-import HeaderType from './components/Header';
-
-export type HeaderProps = HeaderType;
+import LocalHeaderProps from './components/Header';
+export type HeaderProps = LocalHeaderProps;
