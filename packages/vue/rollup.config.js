@@ -5,7 +5,7 @@ import babel from 'rollup-plugin-babel';
 import scss from 'rollup-plugin-scss';
 import pkg from './package.json';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.ts', '.tsx', '.vue'];
 
 const name = 'RollupVue';
 
@@ -36,6 +36,7 @@ export default {
     {
       file: 'dist/' + pkg.main,
       format: 'cjs',
+      // format: 'esm',
     },
     // {
     //   file: pkg.module,

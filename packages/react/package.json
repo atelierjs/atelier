@@ -8,7 +8,7 @@
   "types": "types/packages/react/src/index.d.ts",
   "scripts": {
     "build:clean": "rm -rf dist",
-    "build:js": "babel src -d dist --extensions .ts,.tsx",
+    "build:js": "babel src -d build --extensions .ts,.tsx",
     "build:types": "tsc --emitDeclarationOnly",
     "build": "npm-run-all build:types build:js",
     "bundle:rollup": "rollup -c",
@@ -16,7 +16,6 @@
     "prebuild": "npm run build:clean",
     "prebundle": "npm run prebuild",
     "postbundle": "cp package.json ./dist && cp -r ../core/dist ./dist/core",
-    "postbuild": "npm run postbundle",
     "yalc": "cd dist && yalc publish --push"
   },
   "dependencies": {

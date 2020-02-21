@@ -9,14 +9,13 @@
   "scripts": {
     "build:clean": "rm -rf dist",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "webpack",
+    "build:js": "babel src -d build --extensions .ts,.tsx",
     "build": "npm-run-all build:clean build:js",
+    "bundle:rollup": "rollup -c",
+    "bundle": "npm-run-all build:types bundle:rollup",
     "prebuild": "npm run build:clean",
     "prebundle": "npm run prebuild",
-    "bundle:rollup": "rollup -c",
-    "bundle": "npm-run-all bundle:rollup",
     "postbundle": "cp package.json ./dist && cp -r ../core/dist ./dist/core",
-    "postbuild": "npm run postbundle",
     "yalc": "cd dist && yalc publish --push"
   },
   "dependencies": {
