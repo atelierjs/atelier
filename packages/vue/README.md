@@ -1,1 +1,3 @@
-# Component Lib - Vue
+# Atelier for Vue
+
+Vue-specific docs here

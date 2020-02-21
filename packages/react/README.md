@@ -1,1 +1,3 @@
-# Component Lib - React
+# Atelier for React
+
+React-specific docs here
