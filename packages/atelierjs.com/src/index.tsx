@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import '@atelierjs/core/dist';
+import '@atelierjs/core/dist/css/atelier.css';
 import App from './App';
 // import './index.scss';
 
