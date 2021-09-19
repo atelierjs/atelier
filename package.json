@@ -1,0 +1,28 @@
+{
+  "name": "atelierjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Travis Henning & Ryan Meloy",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:core": "cd packages/core && yarn build",
+    "build:react": "cd packages/react && yarn build",
+    "lerna": "lerna",
+    "start:react": "cd packages/atelierjs.com && yarn start",
+    "start": "yarn start:react"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "sass": "^1.37.5"
+  },
+  "husky": {
+    "pre-commit": "pretty-quick --staged"
+  }
+}

@@ -1,0 +1,9 @@
+.card {
+  background-color: white;
+  border-radius: 6px;
+  padding: 16px;
+
+  &.flat {
+    border: 1px solid #333;
+  }
+}

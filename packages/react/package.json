@@ -1,0 +1,43 @@
+{
+  "name": "@atelierjs/react",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "author": "Travis Henning & Ryan Meloy",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && tsc --emitDeclarationOnly && rollup --config",
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/react": "^17.0.17",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "clsx": "^1.1.1",
+    "postcss": "^8.3.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.56.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^3.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@atelierjs/core": "^0.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  }
+}
