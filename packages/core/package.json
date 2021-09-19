@@ -1,13 +1,20 @@
 {
   "name": "@atelierjs/core",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Travis Henning & Ryan Meloy",
   "license": "MIT",
   "private": true,
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "mkdir -p dist/scss && cp -r src/** dist/scss"
+    "build:compile": "gulp build",
+    "build:copy": "cross-env mkdir -p dist/scss && cp -r src/**/*.scss dist/scss && cp src/index.js dist",
+    "build": "yarn build:copy && yarn build:compile",
+    "watch": "gulp watch"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.41.1"
+  }
 }

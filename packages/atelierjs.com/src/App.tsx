@@ -1,13 +1,13 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import routes from './routes';
 
-const App = () => (
+const App: React.VFC = () => (
   <div className="atelier-app">
     <Switch>
       <Suspense fallback={<></>}>
         {Object.values(routes).map((x) => (
-          <Route {...x} />
+          <Route key={x.name} {...x} />
         ))}
       </Suspense>
     </Switch>

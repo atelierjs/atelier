@@ -13,18 +13,22 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "lerna run build --ignore atelierjs.com",
     "build:core": "cd packages/core && yarn build",
     "build:react": "cd packages/react && yarn build",
     "lerna": "lerna",
     "start:react": "cd packages/atelierjs.com && yarn start",
-    "start": "yarn start:react"
+    "start": "npm-run-all --parallel watch start:react",
+    "watch": "lerna exec --parallel -- yarn watch"
   },
   "devDependencies": {
-    "husky": "^7.0.1",
+    "cross-env": "^7.0.3",
+    "husky": "^7.0.2",
     "lerna": "^4.0.0",
-    "prettier": "^2.3.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
-    "sass": "^1.37.5"
+    "sass": "^1.41.1"
   },
   "husky": {
     "pre-commit": "pretty-quick --staged"
