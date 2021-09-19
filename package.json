@@ -5,6 +5,10 @@
   "author": "Travis Henning & Ryan Meloy",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atelierjs/atelier"
+  },
   "workspaces": [
     "packages/*"
   ],
