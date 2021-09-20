@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { useAppContext } from '../../context';
-import { Drawer, DrawerProps } from '@atelierjs/react';
+import { Drawer } from '@atelierjs/react';
 import { useOnClickOutside } from '../../utils';
 
 import './LeftNav.scss';
 
-export type LeftNavProps = DrawerProps & {};
+export type LeftNavProps = {};
 
 const LeftNav: React.FC<LeftNavProps> = ({ children }) => {
   const navRef = useRef<HTMLDivElement>(null);
