@@ -1,7 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import css from 'rollup-plugin-import-css';
 
 import pkg from './package.json';
 
@@ -28,7 +27,6 @@ const config = {
       babelHelpers: 'inline', // Place babel helper functions in the same file they were used
       include: extensions.map((ext) => `src/**/*${ext}`),
     }),
-    css(),
   ],
   external, // https://rollupjs.org/guide/en/#peer-dependencies
 };

@@ -1,6 +1,6 @@
-import clsx from 'clsx';
 import React from 'react';
-import { Container } from '.';
+import clsx from 'clsx';
+import Container from './Container';
 import { BaseComponentProps } from './BaseComponent';
 
 export type HeaderProps = BaseComponentProps & {};
