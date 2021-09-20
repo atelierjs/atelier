@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import clsx from 'clsx';
+import { Container } from '@atelierjs/react';
 
 import './Page.scss';
 
@@ -13,7 +14,7 @@ const Page: React.FC<PageProps> = ({ children, className, title }) => {
     document.title = title || 'Atelier.js';
   }, [title]);
 
-  return <div className={clsx('page', className)}>{children}</div>;
+  return <Container className={clsx('page', className)}>{children}</Container>;
 };
 
 export default Page;

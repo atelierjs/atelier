@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { BaseComponentProps } from '../BaseComponent';
+import { BaseComponentProps } from './BaseComponent';
 
 // import '@atelierjs/core/dist/css/components/Card.css';
 

@@ -1,9 +1,12 @@
 .card {
+  @include elevation($z-index-card, true);
+  position: relative;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 16px;
 
   &.flat {
+    box-shadow: none;
     border: 1px solid #333;
   }
 }
