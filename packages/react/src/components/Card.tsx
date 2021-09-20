@@ -9,8 +9,14 @@ export type CardProps = BaseComponentProps & {
   onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-const Card: React.FC<CardProps> = ({ children, className, flat, ...props }) => (
-  <div {...props} className={clsx('card', className, { flat })}>
+const Card: React.FC<CardProps> = ({
+  children,
+  innerRef,
+  className,
+  flat,
+  ...props
+}) => (
+  <div {...props} ref={innerRef} className={clsx('card', className, { flat })}>
     {children}
   </div>
 );

@@ -1,6 +1,8 @@
 $z-index-negative: -1;
 $z-index-default: 0;
 $z-index-card: 1;
+$z-index-header: 4;
+$z-index-drawer: 12;
 
 @mixin box-shadow($dp) {
   @if $dp==0 {
@@ -38,7 +40,8 @@ $z-index-card: 1;
   }
 }
 
-@mixin elevation($z-index, $shadow: false) {
+@mixin elevation($z-index, $shadow: true) {
+  position: relative;
   z-index: $z-index;
   @if ($shadow) {
     @include box-shadow($z-index);

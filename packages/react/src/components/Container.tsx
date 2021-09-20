@@ -6,10 +6,11 @@ export type ContainerProps = BaseComponentProps & {};
 
 const Container: React.FC<ContainerProps> = ({
   children,
+  innerRef,
   className,
   ...props
 }) => (
-  <div {...props} className={clsx('container', className)}>
+  <div {...props} ref={innerRef} className={clsx('container', className)}>
     {children}
   </div>
 );

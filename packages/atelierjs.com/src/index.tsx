@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { AppContextProvider } from './context';
 
 import '@atelierjs/core/dist/css/atelier.css';
 import './styles/AvantSans';
@@ -12,7 +13,9 @@ import './index.scss';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
