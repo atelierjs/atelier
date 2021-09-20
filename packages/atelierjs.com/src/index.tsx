@@ -1,18 +1,20 @@
-import { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import '@atelierjs/core/dist/css/atelier.css';
+import './styles/AvantSans';
+
 import App from './App';
-// import './index.scss';
+import './index.scss';
 
 ReactDOM.render(
-  <StrictMode>
+  <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </StrictMode>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
