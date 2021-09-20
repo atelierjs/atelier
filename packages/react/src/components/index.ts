@@ -9,3 +9,6 @@ export * from './Drawer';
 
 export { default as Header } from './Header';
 export * from './Header';
+
+export { default as Portal } from './Portal';
+export * from './Portal';
