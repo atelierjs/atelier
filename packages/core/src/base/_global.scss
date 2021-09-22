@@ -1,0 +1,13 @@
+html {
+  box-sizing: border-box;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
