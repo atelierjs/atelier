@@ -24,9 +24,10 @@ const LeftNav: React.FC<LeftNavProps> = ({ children }) => {
       className="left-nav"
       open={navExpanded}
       onClose={closeNav}
+      mask
     >
       <div className="left-nav--upper">
-        <div className="left-nav--menu" />
+        <div className="left-nav--menu" onClick={closeNav} />
       </div>
       {children}
     </Drawer>
