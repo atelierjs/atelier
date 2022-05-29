@@ -1,3 +1,5 @@
+export * from './AtelierComponent';
+
 export { default as Card } from './Card';
 export * from './Card';
 

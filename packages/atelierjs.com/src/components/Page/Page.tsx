@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import clsx from 'clsx';
 import { Container } from '@atelierjs/react';
+import { FCWithChildren } from '../../utils';
 
 import './Page.scss';
 
@@ -9,7 +10,7 @@ export type PageProps = {
   title?: string;
 };
 
-const Page: React.FC<PageProps> = ({ children, className, title }) => {
+const Page: FCWithChildren<PageProps> = ({ children, className, title }) => {
   useEffect(() => {
     document.title = title || 'Atelier.js';
   }, [title]);

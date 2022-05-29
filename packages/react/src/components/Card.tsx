@@ -1,15 +1,15 @@
 import React from 'react';
 import clsx from 'clsx';
-import { BaseComponentProps } from './BaseComponent';
+import { AtelierComponent } from './AtelierComponent';
 
 // import '@atelierjs/core/dist/css/components/Card.css';
 
-export type CardProps = BaseComponentProps & {
+export type CardProps = {
   flat?: boolean;
   onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-const Card: React.FC<CardProps> = ({
+const Card: AtelierComponent<CardProps> = ({
   children,
   innerRef,
   className,

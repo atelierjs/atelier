@@ -1,10 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
-import { BaseComponentProps } from './BaseComponent';
+import { AtelierComponent } from './AtelierComponent';
 
-export type ContainerProps = BaseComponentProps & {};
-
-const Container: React.FC<ContainerProps> = ({
+const Container: AtelierComponent = ({
   children,
   innerRef,
   className,

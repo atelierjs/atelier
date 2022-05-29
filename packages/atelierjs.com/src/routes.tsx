@@ -3,15 +3,17 @@ import { RouteProps } from 'react-router-dom';
 
 export type AppRoute = RouteProps & {
   name: string;
+  fallback?: React.ReactNode;
   meta?: Record<string, unknown>;
 };
+
+const Home = React.lazy(() => import('./views/Home'));
 
 const routesArray: AppRoute[] = [
   {
     name: 'index',
     path: '/',
-    exact: true,
-    component: React.lazy(() => import('./views/Home')),
+    element: <Home />,
   },
 ];
 

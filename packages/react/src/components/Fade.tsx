@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { AtelierComponent } from './AtelierComponent';
 
 export type FadeProps = {
   show: boolean;
@@ -6,7 +7,7 @@ export type FadeProps = {
   durationOut?: number;
 };
 
-const Fade: React.FC<FadeProps> = ({
+const Fade: AtelierComponent<FadeProps> = ({
   children,
   show,
   duration,

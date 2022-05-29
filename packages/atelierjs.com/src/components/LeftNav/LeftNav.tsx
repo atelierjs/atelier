@@ -5,7 +5,7 @@ import { useOnClickOutside } from '../../utils';
 
 import './LeftNav.scss';
 
-const LeftNav: React.VFC = () => {
+const LeftNav: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
   const { navExpanded, closeNav } = useAppContext();

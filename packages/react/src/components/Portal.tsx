@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 export type PortalProps = {
+  children: React.ReactNode;
   elementId: string;
 };
 

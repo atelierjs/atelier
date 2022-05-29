@@ -1,13 +1,13 @@
 import React from 'react';
 import clsx from 'clsx';
 import Container from './Container';
-import { BaseComponentProps } from './BaseComponent';
+import { AtelierComponent } from './AtelierComponent';
 
-export type HeaderProps = BaseComponentProps & {
+export type HeaderProps = {
   onMenuClick?: (e: React.MouseEvent) => void;
 };
 
-const Header: React.FC<HeaderProps> = ({
+const Header: AtelierComponent<HeaderProps> = ({
   children,
   innerRef,
   className,

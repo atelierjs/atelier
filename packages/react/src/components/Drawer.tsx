@@ -1,16 +1,16 @@
 import clsx from 'clsx';
 import React, { useLayoutEffect } from 'react';
 import Portal from './Portal';
-import { BaseComponentProps } from './BaseComponent';
+import { AtelierComponent } from './AtelierComponent';
 import Fade from './Fade';
 
-export type DrawerProps = BaseComponentProps & {
+export type DrawerProps = {
   open: boolean;
   onClose: () => void;
   mask?: boolean;
 };
 
-const Drawer: React.FC<DrawerProps> = ({
+const Drawer: AtelierComponent<DrawerProps> = ({
   children,
   innerRef,
   className,

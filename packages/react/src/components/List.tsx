@@ -1,8 +1,6 @@
-import React from 'react';
+import { AtelierComponent } from './AtelierComponent';
 
-export type ListProps = {};
-
-const List: React.FC<ListProps> = ({ children }) => {
+const List: AtelierComponent = ({ children }) => {
   return <div className="list">{children}</div>;
 };
 

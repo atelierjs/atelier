@@ -5,6 +5,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import { FCWithChildren } from '../utils';
 
 export type AppContextType = {
   navExpanded: boolean;
@@ -30,7 +31,7 @@ export const useAppContext = () => {
   return context;
 };
 
-export const AppContextProvider: React.FC = ({ children }) => {
+export const AppContextProvider: FCWithChildren = ({ children }) => {
   const [navExpanded, setNavExpanded] = useState(false);
 
   const openNav = useCallback(() => setNavExpanded(true), []);

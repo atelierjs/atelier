@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import React from 'react';
-import { BaseComponentProps } from './BaseComponent';
+import { AtelierComponent } from './AtelierComponent';
 
-export type ListItemProps = BaseComponentProps & {
+export type ListItemProps = {
   onClick?: (e: React.MouseEvent) => void;
 };
 
-const ListItem: React.FC<ListItemProps> = ({
+const ListItem: AtelierComponent<ListItemProps> = ({
   children,
   className,
   onClick,
