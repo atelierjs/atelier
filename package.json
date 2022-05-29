@@ -16,6 +16,7 @@
     "build": "lerna run build --ignore atelierjs.com",
     "build:core": "cd packages/core && yarn build",
     "build:react": "cd packages/react && yarn build",
+    "format": "prettier --write \"**/*.*(js|jsx|ts|tsx|scss)\"",
     "lerna": "lerna",
     "prepare": "husky install",
     "start": "npm-run-all --parallel watch:core watch:react start:site",
