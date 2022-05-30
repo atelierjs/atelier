@@ -1,0 +1,42 @@
+$background-color: #4d9de0;
+
+.button {
+  @include elevation($z-index-button);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 12px;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  font-weight: bold;
+  min-width: 80px;
+  height: 40px;
+  letter-spacing: 0.5px;
+
+  &--primary {
+    background-color: $background-color;
+    border: none;
+    color: white;
+
+    &:hover {
+      background-color: mix(black, $background-color, 8%);
+    }
+
+    &:active {
+      background-color: mix(black, $background-color, 16%);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid $background-color;
+    color: $background-color;
+  }
+
+  &:hover {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:active {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

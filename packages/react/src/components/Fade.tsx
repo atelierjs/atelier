@@ -9,9 +9,11 @@ export type FadeProps = {
 
 const Fade: AtelierComponent<FadeProps> = ({
   children,
+  innerRef,
   show,
   duration,
   durationOut,
+  ...props
 }) => {
   const [visible, setVisible] = useState(show);
 
@@ -29,7 +31,12 @@ const Fade: AtelierComponent<FadeProps> = ({
   };
 
   return visible ? (
-    <div style={style} onAnimationEnd={onAnimationEnd}>
+    <div
+      {...props}
+      ref={innerRef}
+      style={style}
+      onAnimationEnd={onAnimationEnd}
+    >
       {children}
     </div>
   ) : null;

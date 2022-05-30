@@ -8,3 +8,7 @@ To get up and running immediately, simply clone the project and run these comman
 
 - `yarn install`
 - `yarn start`
+
+## Husky Setup
+
+To initialize husky, first make sure to `yarn install` as above, then run `yarn prepare` once, which will connect the husky pre-commit hook to git. This is being used to enforce formatting on all staged files before committing them to git.

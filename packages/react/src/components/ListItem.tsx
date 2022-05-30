@@ -8,11 +8,15 @@ export type ListItemProps = {
 
 const ListItem: AtelierComponent<ListItemProps> = ({
   children,
+  innerRef,
   className,
   onClick,
+  ...props
 }) => {
   return (
     <div
+      {...props}
+      ref={innerRef}
       className={clsx('list-item', className, { clickable: !!onClick })}
       onClick={onClick}
     >

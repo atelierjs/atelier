@@ -28,9 +28,9 @@ const LeftNav: React.FC = () => {
         <div className="left-nav--menu" onClick={closeNav} />
       </div>
       <ListItem onClick={() => {}}>Button</ListItem>
-      <ListItem>Card</ListItem>
-      <ListItem>Button</ListItem>
-      <ListItem>Button</ListItem>
+      <ListItem>List Item</ListItem>
+      <ListItem onClick={() => {}}>Button</ListItem>
+      <ListItem onClick={() => {}}>Button</ListItem>
     </Drawer>
   );
 };

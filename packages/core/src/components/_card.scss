@@ -1,6 +1,5 @@
 .card {
   @include elevation($z-index-card);
-  position: relative;
   background-color: white;
   border-radius: 6px;
   padding: 16px;
