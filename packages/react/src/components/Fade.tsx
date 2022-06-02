@@ -26,8 +26,13 @@ const Fade: AtelierComponent<FadeProps> = ({
   const fadeInTime = `${duration || 250}ms`;
   const fadeOutTime = `${durationOut || duration || 250}ms`;
 
+  // animation-fill-mode "forwards" used as a hacky fix for React 18 animation flickering
+  const animation = show
+    ? `fadeIn ${fadeInTime} forwards`
+    : `fadeOut ${fadeOutTime} forwards`;
+
   const style: React.CSSProperties = {
-    animation: show ? `fadeIn ${fadeInTime}` : `fadeOut ${fadeOutTime}`,
+    animation,
   };
 
   return visible ? (

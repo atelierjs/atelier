@@ -1,4 +1,4 @@
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
 const List: AtelierComponent = ({ children, innerRef, ...props }) => {
   return (

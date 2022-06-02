@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
 // import '@atelierjs/core/dist/css/components/Card.css';
 

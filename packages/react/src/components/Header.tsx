@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import Container from './Container';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent, Container } from '@components';
 
 export type HeaderProps = {
   onMenuClick?: (e: React.MouseEvent) => void;

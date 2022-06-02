@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
 export type ListItemProps = {
   onClick?: (e: React.MouseEvent) => void;

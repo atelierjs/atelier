@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
 const Container: AtelierComponent = ({
   children,

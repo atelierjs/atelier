@@ -26,3 +26,6 @@ export * from './ListItem';
 
 export { default as Portal } from './Portal';
 export * from './Portal';
+
+export { default as ScrollTracker } from './ScrollTracker';
+export * from './ScrollTracker';

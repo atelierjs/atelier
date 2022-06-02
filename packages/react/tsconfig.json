@@ -17,7 +17,11 @@
     "declaration": true,
     "outDir": "dist/types",
     "rootDir": "src",
-    "baseUrl": "."
+    "baseUrl": "./src",
+    "paths": {
+      "@hooks": ["hooks"],
+      "@components": ["components"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "dist"]

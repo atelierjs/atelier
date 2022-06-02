@@ -1,4 +1,4 @@
-import { Button, Card } from '@atelierjs/react';
+import { Button, Card, ScrollTracker } from '@atelierjs/react';
 import { Page } from '../../components';
 
 import './Home.scss';
@@ -13,6 +13,8 @@ const Home: React.VFC = () => (
         Secondary
       </Button>
     </div>
+    <div style={{ height: 2000 }}>Long component to add scroll</div>
+    <ScrollTracker />
   </Page>
 );
 

@@ -1,14 +1,20 @@
 import clsx from 'clsx';
 import React from 'react';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
-export type ButtonProps = {
+type BaseButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
+
+export type ButtonProps = BaseButtonProps & {
   variant?: 'primary' | 'secondary';
 };
 
 const Button: AtelierComponent<ButtonProps, HTMLButtonElement> = ({
   children,
   innerRef,
+  className,
   variant,
   ...props
 }) => {
@@ -16,7 +22,7 @@ const Button: AtelierComponent<ButtonProps, HTMLButtonElement> = ({
     <button
       {...props}
       ref={innerRef}
-      className={clsx('button', `button--${variant || 'primary'}`)}
+      className={clsx('button', `button--${variant || 'primary'}`, className)}
     >
       {children}
     </button>

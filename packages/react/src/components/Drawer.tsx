@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import React, { useLayoutEffect } from 'react';
-import Portal from './Portal';
-import { AtelierComponent } from './AtelierComponent';
-import Fade from './Fade';
+import { AtelierComponent, Fade, Portal } from '@components';
 
 export type DrawerProps = {
   open: boolean;
@@ -19,11 +17,11 @@ const Drawer: AtelierComponent<DrawerProps> = ({
   ...props
 }) => {
   useLayoutEffect(() => {
-    const html = document.documentElement;
-    open ? html.classList.add('no-scroll') : html.classList.remove('no-scroll');
+    const htmlClasses = document.documentElement.classList;
+    open ? htmlClasses.add('no-scroll') : htmlClasses.remove('no-scroll');
 
     return () => {
-      html.classList.remove('no-scroll');
+      htmlClasses.remove('no-scroll');
     };
   }, [open]);
 
