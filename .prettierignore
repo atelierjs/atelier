@@ -1,3 +1,4 @@
+.husky/_
 build/
 dist/
 node_modules/
