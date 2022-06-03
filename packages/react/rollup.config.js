@@ -7,10 +7,12 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 import pkg from './package.json';
 
+const { getAliasMap } = require('./config/alias');
 const projectRoot = path.resolve(__dirname);
 
 const extensions = ['.ts', '.tsx'];
-const external = Object.keys(pkg.devDependencies);
+const externalDev = Object.keys(pkg.devDependencies);
+const externalRuntime = Object.keys(pkg.dependencies);
 
 const config = {
   input: ['src/index.ts'],
@@ -25,13 +27,10 @@ const config = {
     peerDepsExternal(), // https://rollupjs.org/guide/en/#peer-dependencies
     resolve({ extensions }),
     alias({
-      entries: [
-        { find: '@hooks', replacement: path.resolve(projectRoot, 'src/hooks') },
-        {
-          find: '@components',
-          replacement: path.resolve(projectRoot, 'src/components'),
-        },
-      ],
+      entries: Object.entries(getAliasMap()).map(([find, replacement]) => ({
+        find,
+        replacement: path.resolve(projectRoot, replacement),
+      })),
     }),
     babel({
       extensions, // Compile our TypeScript files
@@ -39,7 +38,7 @@ const config = {
       include: extensions.map((ext) => `src/**/*${ext}`),
     }),
   ],
-  external, // https://rollupjs.org/guide/en/#peer-dependencies
+  external: [...externalDev, ...externalRuntime], // https://rollupjs.org/guide/en/#peer-dependencies
 };
 
 export default config;

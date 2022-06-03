@@ -6,7 +6,7 @@ import { useScroll } from '@hooks';
 
 const scroller = Scroll.animateScroll;
 
-const ScrollTracker: AtelierVoidComponent = (className, ...props) => {
+const ScrollTracker: AtelierVoidComponent = ({ className, ...props }) => {
   const scrollPosition = useScroll();
 
   const visible = scrollPosition.scrollY > 0;

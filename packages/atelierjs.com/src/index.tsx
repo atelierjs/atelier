@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AppContextProvider } from './context';
+import { AppContextProvider } from '@context';
 
-import '@atelierjs/core/dist/css/atelier.css';
-import './styles/AvantSans';
+import '@atelierjs/core';
+import '@styles/AvantSans';
 
 import App from './App';
 import './index.scss';

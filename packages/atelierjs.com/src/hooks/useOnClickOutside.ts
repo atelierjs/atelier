@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-export const useOnClickOutside = <T extends Element>(
+const useOnClickOutside = <T extends Element>(
   ref: React.RefObject<T>,
   callback: (e: Event) => void
 ) => {
@@ -22,3 +22,5 @@ export const useOnClickOutside = <T extends Element>(
     };
   }, [ref, callback]);
 };
+
+export default useOnClickOutside;

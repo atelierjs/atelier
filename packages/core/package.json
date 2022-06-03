@@ -7,9 +7,10 @@
   "private": true,
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build:compile": "gulp build",
-    "build:copy": "cross-env mkdir -p dist/scss && cp -r src/** dist/scss",
-    "build": "npm-run-all build:copy build:compile",
+    "build:copy": "cross-env mkdir dist && cp -r src/** dist",
+    "build:css": "gulp build",
+    "build": "npm-run-all build:copy build:css",
+    "postbuild": "cross-env mv dist/index-css.js dist/css/index.js",
     "prewatch": "yarn build",
     "watch": "gulp watch"
   },

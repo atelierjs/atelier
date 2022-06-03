@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import clsx from 'clsx';
 import { Container } from '@atelierjs/react';
-import { FCWithChildren } from '../../utils';
+import { FCWithChildren } from '../../types';
 
 import './Page.scss';
 

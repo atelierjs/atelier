@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import routes from './routes';
-import { AppBar, LeftNav } from './components';
+import { AppBar, LeftNav } from '@components';
 
 import './App.scss';
 

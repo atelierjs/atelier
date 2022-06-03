@@ -1,9 +1,9 @@
 import { Button, Card, ScrollTracker } from '@atelierjs/react';
-import { Page } from '../../components';
+import { Page } from '@components';
 
 import './Home.scss';
 
-const Home: React.VFC = () => (
+const Home: React.FC = () => (
   <Page className="home">
     <div className="title">Home page</div>
     <Card style={{ marginBottom: 24 }}>This is an Atelier card component.</Card>

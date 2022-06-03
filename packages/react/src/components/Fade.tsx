@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { AtelierComponent } from './AtelierComponent';
+import { AtelierComponent } from '@components';
 
 export type FadeProps = {
   show: boolean;
@@ -10,6 +10,7 @@ export type FadeProps = {
 const Fade: AtelierComponent<FadeProps> = ({
   children,
   innerRef,
+  style,
   show,
   duration,
   durationOut,
@@ -31,7 +32,8 @@ const Fade: AtelierComponent<FadeProps> = ({
     ? `fadeIn ${fadeInTime} forwards`
     : `fadeOut ${fadeOutTime} forwards`;
 
-  const style: React.CSSProperties = {
+  const styleWithFade: React.CSSProperties = {
+    ...style,
     animation,
   };
 
@@ -39,7 +41,7 @@ const Fade: AtelierComponent<FadeProps> = ({
     <div
       {...props}
       ref={innerRef}
-      style={style}
+      style={styleWithFade}
       onAnimationEnd={onAnimationEnd}
     >
       {children}

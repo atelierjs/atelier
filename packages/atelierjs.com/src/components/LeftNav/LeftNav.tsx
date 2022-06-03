@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
-import { useAppContext } from '../../context';
+import { useAppContext } from '@context';
 import { Drawer, ListItem } from '@atelierjs/react';
-import { useOnClickOutside } from '../../utils';
+import { useOnClickOutside } from '@hooks';
 
 import './LeftNav.scss';
 

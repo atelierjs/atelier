@@ -5,7 +5,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import { FCWithChildren } from '../utils';
+import { FCWithChildren } from '../types';
 
 export type AppContextType = {
   navExpanded: boolean;

@@ -7,11 +7,11 @@ export type AtelierComponentProps<R extends HTMLElement = HTMLDivElement> = {
 };
 
 export type AtelierVoidComponent<
-  T = {},
+  P = {},
   R extends HTMLElement = HTMLDivElement
-> = React.FC<AtelierComponentProps<R> & T>;
+> = React.FC<AtelierComponentProps<R> & P>;
 
 export type AtelierComponent<
-  T = {},
+  P = {},
   R extends HTMLElement = HTMLDivElement
-> = AtelierVoidComponent<T & { children: React.ReactNode }, R>;
+> = AtelierVoidComponent<P & { children: React.ReactNode }, R>;
