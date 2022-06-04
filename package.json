@@ -16,6 +16,7 @@
     "build": "npm-run-all build:core build:react",
     "build:core": "cd packages/core && yarn build",
     "build:react": "cd packages/react && yarn build",
+    "build:site": "cd packages/atelierjs.com && yarn build",
     "format": "prettier --write \"**/*.*(js|jsx|ts|tsx|scss)\"",
     "prepare": "husky install",
     "start": "npm-run-all --parallel watch:core watch:react start:site",
