@@ -1,0 +1,20 @@
+.accordion {
+  $self: &;
+
+  &.expanded {
+    #{$self}--content {
+      height: auto;
+      margin-top: 1rem;
+    }
+  }
+
+  &--title {
+    font-size: 1.5rem;
+  }
+
+  &--content {
+    height: 0;
+    overflow: hidden;
+    transition: 250ms ease-in-out;
+  }
+}
