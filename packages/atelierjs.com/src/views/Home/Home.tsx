@@ -16,7 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <Page className="home">
-      <div className="title">Home page</div>
+      <h1 className="title">Home page</h1>
       <Card style={{ marginBottom: 24 }}>
         This is an Atelier card component.
       </Card>

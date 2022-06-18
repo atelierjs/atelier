@@ -9,7 +9,9 @@
   }
 
   &--title {
-    font-size: 1.5rem;
+    h3 {
+      line-height: 1;
+    }
   }
 
   &--content {

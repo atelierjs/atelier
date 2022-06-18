@@ -9,7 +9,11 @@ export type AccordionTitleProps = {
 export const AccordionTitle: AtelierComponent<AccordionTitleProps> = ({
   children,
   className,
-}) => <div className={clsx('accordion--title', className)}>{children}</div>;
+}) => (
+  <div className={clsx('accordion--title', className)}>
+    <h3>{children}</h3>
+  </div>
+);
 
 export type AccordionContentProps = {};
 
