@@ -6,11 +6,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "craco build",
-    "start": "craco start"
+    "build": "gatsby build",
+    "start": "gatsby develop"
   },
   "dependencies": {
     "@atelierjs/react": "^0.0.0",
+    "gatsby": "^4.16.0",
+    "gatsby-plugin-layout": "^3.16.0",
+    "gatsby-plugin-sass": "^5.16.0",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
@@ -20,7 +23,6 @@
     "clsx": "^1.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
     "typescript": "^4.7.4"
   },
   "eslintConfig": {

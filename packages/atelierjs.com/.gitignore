@@ -1,3 +1,5 @@
+.cache/
 fonts/
+public/
 
 src/styles/AvantSans/AvantSans.scss

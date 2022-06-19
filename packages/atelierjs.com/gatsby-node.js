@@ -10,13 +10,16 @@ const alias = Object.fromEntries(
   ])
 );
 
-module.exports = {
-  webpack: {
-    alias,
-    configure: {
-      module: {
-        exprContextCritical: false,
-      },
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias,
     },
-  },
+  });
 };

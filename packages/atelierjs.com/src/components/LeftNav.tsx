@@ -3,7 +3,7 @@ import { useAppContext } from '@context';
 import { Drawer, ListItem } from '@atelierjs/react';
 import { useOnClickOutside } from '@hooks';
 
-import './LeftNav.scss';
+import '@styles/components/left-nav.scss';
 
 const LeftNav: React.FC = () => {
   const navRef = useRef<HTMLDivElement>(null);

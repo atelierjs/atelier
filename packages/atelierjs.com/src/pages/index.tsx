@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -9,7 +9,7 @@ import {
 } from '@atelierjs/react';
 import { Page } from '@components';
 
-import './Home.scss';
+import '@styles/pages/index.scss';
 
 const Home: React.FC = () => {
   const [accordionExpanded, setAccordionExpanded] = useState(false);
