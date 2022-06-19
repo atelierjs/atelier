@@ -18,3 +18,13 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
