@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useAppContext } from '@context';
-import { Drawer, ListItem, ListItemProps } from '@atelierjs/react';
+import { Drawer, ListItem } from '@atelierjs/react';
 import { useOnClickOutside } from '@hooks';
 import { Link } from 'gatsby';
 import { FCWithChildren } from 'types';
@@ -36,7 +36,7 @@ const LeftNav: React.FC = () => {
         <div className="left-nav--menu" onClick={closeNav} />
       </div>
       <div className="left-nav--lower">
-        <ListItemLink to="/components/acordion">Accordion</ListItemLink>
+        <ListItemLink to="/components/accordion">Accordion</ListItemLink>
         <ListItemLink to="/components/button">Button</ListItemLink>
         <ListItemLink to="/components/card">Card</ListItemLink>
         <ListItemLink to="/components/container">Container</ListItemLink>

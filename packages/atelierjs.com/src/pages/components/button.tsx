@@ -4,8 +4,8 @@ import { Page } from '@components';
 
 const ButtonPage: React.FC = () => {
   return (
-    <Page className="home">
-      <h1 className="title">Home page</h1>
+    <Page className="button-page">
+      <h1 className="title">Button</h1>
       <Button>Primary</Button>
       <Button variant="secondary" style={{ marginLeft: 16 }}>
         Secondary
